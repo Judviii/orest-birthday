@@ -1,0 +1,15 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT landing.wsgi
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: "landing.settings"
+  DJANGO_SECRET_KEY: "your-secure-secret-key"
+  DJANGO_DEBUG: "False"
+  GS_BUCKET_NAME: "orest-birthday-static"
+  GOOGLE_APPLICATION_CREDENTIALS: "orest-birthday-777-61eb64162f83.json"
+
+handlers:
+- url: /static
+  static_dir: staticfiles
+- url: /.*
+  script: auto
