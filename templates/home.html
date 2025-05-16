@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid px-0">
-    <section class="section-1 d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
+    <section class="section-1 d-flex align-items-end justify-content-center text-center" data-aos="fade-up">
         <div>
             <h1 class="display-4 text-white">Develop by Judviii</h1>
             <p class="lead text-white">With mental support provided by Screw4ik</p>
@@ -10,26 +10,32 @@
             <p class="lead text-white">with love and honor</p>
         </div>
     </section>
-    <section class="section-2 d-flex align-items-center justify-content-center text-center">
+    <section class="section-2 no-overlay d-flex align-items-center justify-content-center text-center">
         <div>
             <h1 class="display-4 text-white">Тебе хоче привітати:</h1>
             <p class="lead text-white">Ростислав "Screw4ik" Катамаран</p>
-            <div class="rotating-images">
-                <img src="{% static 'img/rosuk.png' %}" alt="Image 1" class="rotate">
+            <div class="rotating-videos">
+                <video autoplay muted loop class="rotate" preload="auto">
+                    <source src="{% static 'video/rostuk.webm' %}" type="video/webm" >
+                    Your browser does not support the video tag.
+                </video>
                 <img src="{% static 'gifs/csgo-deagle.gif' %}" width="200" height="200">
-                <img src="{% static 'img/rosuk.png' %}" alt="Image 2" class="rotate">
+                <video autoplay muted loop class="rotate" preload="auto">
+                    <source src="{% static 'video/rostuk.webm' %}" type="video/webm" >
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <p class="lead text-white">Асоціюється з фразою "Та йоб тваю мать Катаран"</p>
             <p class="lead text-white">і ван тапами з дігла</p>
         </div>
     </section>
-    <section class="section-3 d-flex align-items-center justify-content-center text-center">
+    <section class="section-3 no-overlay d-flex align-items-center justify-content-center text-center">
         <div>
             <h1 class="display-4 text-white">Тебе хоче привітати:</h1>
             <p class="lead text-white">Вадим "Judviii" Триноженко</p>
             <div class="rotating-images">
                 <img src="{% static 'img/vadym.png' %}" alt="Image 1" class="rotate-1">
-                <img src="{% static 'gifs/csgo-fail.gif' %}" width="200" height="200">
+                <img src="{% static 'gifs/csgo-fail.gif' %}" width="300" height="300">
                 <img src="{% static 'img/vadym.png' %}" alt="Image 2" class="rotate-1">
             </div>
             <p class="lead text-white">Асоціюється з фразою "Бабій хоч колись мене почує?"</p>
@@ -51,7 +57,7 @@
             <p class="lead text-white">Ми вирішили попросити наших гарних знайомих зробити це за нас</p>
         </div>
     </section>
-    <section class="section-video d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
+    <section class="section-video no-overlay d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
         <video autoplay muted loop class="video-bg" id="birthday-video" preload="auto">
             <source src="{% static 'video/vitaemo2.mp4' %}" type="video/mp4" >
             Your browser does not support the video tag.

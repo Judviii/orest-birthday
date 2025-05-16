@@ -32,7 +32,9 @@ SECRET_KEY = os.environ.get(
 DEBUG = os.environ.get("DJANGO_DEBUG")
 
 # SECURITY WARNING: define the correct hosts in production!
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "localhost", "127.0.0.1", "orest-birthday-777.an.r.appspot.com"
+]
 
 
 # Application definition
@@ -142,3 +144,5 @@ DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 GS_BUCKET_NAME = os.getenv('GS_BUCKET_NAME', 'orest-birthday-static')
 STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
+MEDIA_URL = 'https://storage.googleapis.com/orest-birthday-static/media/'
+MEDIA_ROOT = 'media/'
