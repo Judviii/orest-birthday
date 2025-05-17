@@ -1,0 +1,118 @@
+/* Секції з GIF-фонами */
+section {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Накладка для читабельності */
+section:not(.no-overlay)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Контент поверх накладки */
+section > div {
+    position: relative;
+    z-index: 2;
+}
+
+/* Унікальні GIF-фони */
+.section-1 {
+    background-image: url('../gifs/tokyo-ghoul.gif');
+}
+.section-2 {
+    background-image: url('../gifs/Sekiro_2.gif');
+}
+.section-3 {
+    background-image: url('../gifs/dayz.gif');
+}
+.section-4 {
+    background-image: url('../gifs/happy-birthday-happy-birthday-to-you.gif');
+}
+.section-5 {
+    background-image: url('../gifs/sparklers-birthday.gif');
+}
+.section-6 {
+    background-image: url('../gifs/happyday.gif');
+}
+.section-7 {
+    background-image: url('../gifs/happy-birthday.gif');
+}
+.section-8 {
+    background-image: url('../img/gigachad.png');
+}
+.section-video {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* можна залишити */
+    z-index: 0;
+}
+
+/* Кольори тексту */
+.text-color-1 { color: #ffffff; }
+.text-color-2 { color: #ffeb3b; }
+.text-color-3 { color: #4caf50; }
+.text-color-4 { color: #f44336; }
+.text-color-5 { color: #2196f3; }
+.text-color-6 { color: #ff9800; }
+
+/* Анімація обертання зображень */
+.rotating-images {
+    display: flex;
+    gap: 200px;
+    margin-top: 20px;
+}
+.rotating-videos {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.rotate {
+    width: 500px; /* Зміни розмір за потребою */
+    height: 500px;
+    animation: spin 5s linear infinite;
+}
+.rotate-1 {
+    width: 600px; /* Зміни розмір за потребою */
+    height: 350px;
+    animation: spin 5s linear infinite;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    p { font-size: 1rem; }
+    .rotate {
+        width: 60px;
+        height: 60px;
+    }
+}
+.section-video::before {
+    background: none;
+}
