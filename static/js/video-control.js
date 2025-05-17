@@ -16,7 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
             video.play().catch((e) => console.error('Play error:', e));
         } else {
             video.muted = true;
-            video.pause().catch((e) => console.error('Pause error:', e));
+            if (visible) {
+                video.muted = false;
+                video.play().catch((e) => console.warn('Play error:', e));
+            } else {
+                video.muted = true;
+                try {
+                    video.pause();
+                } catch (e) {
+                    console.error('Pause error:', e);
+                }
+            }
         }
     }
 
@@ -29,7 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     video.play().catch((e) => console.error('Play error:', e));
                 } else {
                     video.muted = true;
-                    video.pause().catch((e) => console.error('Pause error:', e));
+                    if (visible) {
+                        video.muted = false;
+                        video.play().catch((e) => console.warn('Play error:', e));
+                    } else {
+                        video.muted = true;
+                        try {
+                            video.pause();
+                        } catch (e) {
+                            console.error('Pause error:', e);
+                        }
+                    }
                 }
             });
         },
